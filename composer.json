@@ -1,0 +1,17 @@
+{
+    "name": "vladk23cm/cart",
+    "description": "My cart",
+    "authors": [
+        {
+            "name": "Vlad Karagaev",
+            "email": "kapagaev111@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+    	"psr-4": {
+      		"Vladk23cm\\Cart\\": "src/"
+    	}
+  	}
+
+}
