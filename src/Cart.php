@@ -12,11 +12,12 @@ class Cart
 	private $id;
 	/*
 	 * Items
-	 * $items[id] => quality
+	 * Key is id
+	 * Value is quality
 	 */
 	private $items = array();
 	/*
-	 * 
+	 * Storage class wich implements Store interface
 	 */
 	private $store;
 
@@ -25,12 +26,16 @@ class Cart
 		$this->id = $id;
 		$this->store = $store;
 	}
-
+	/*
+	 * Gettig a array of items
+	 */
 	public function all()
 	{
 		return $this->items;
 	}
-
+	/*
+	 * Checking a cart for 
+	 */
 	public function has($id)
 	{
 		return !is_null($this->items[$id]);
