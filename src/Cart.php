@@ -51,6 +51,11 @@ class Cart
 		}
 	}
 
+	public function remove($id)
+	{
+		unset($this->items[$id]);
+	}
+	
 	public function update()
 	{
 		$this->store->put($this->id, $this->items);
