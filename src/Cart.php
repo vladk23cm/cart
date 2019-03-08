@@ -34,7 +34,7 @@ class Cart
 		return $this->items;
 	}
 	/*
-	 * Checking a cart for 
+	 * Checking a cart for  
 	 */
 	public function has($id)
 	{
