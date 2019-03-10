@@ -54,7 +54,7 @@ class Cart
 	public function remove($id)
 	{
 		unset($this->items[$id]);
-	}
+	} 
 	
 	public function update()
 	{
