@@ -41,13 +41,15 @@ class Cart
 		return !is_null($this->items[$id]);
 	}
 
-	public function add($id, $quality)
+	public function add($id, $quality, $array)
 	{
 		
 		if($this->has($id)){
-			$this->items[$id] = $this->items[$id] + $quality;
+			$quality = array('quality' =>  $this->items[$id]['quality'] + $quality);
+			$this->items[$id] = array_merge($quality, $array);
 		} else {
-			$this->items[$id] = $quality;
+			$quality = array('quality' =>  $quality);
+			$this->items[$id] = array_merge($quality, $array);
 		}
 	}
 
