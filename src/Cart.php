@@ -71,4 +71,14 @@ class Cart
 	{
 		$this->items = $this->store->flush($this->id);
 	}
+
+	public function count()
+	{
+		$all = $this->all()?:[];
+		$quantity = array_map(function ($arr) {
+			return $arr['quantity'];
+		}, $all);
+		$sum = array_sum($quantity);
+		return $sum;	
+	}
 }
